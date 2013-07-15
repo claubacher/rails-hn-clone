@@ -9,12 +9,10 @@ class UsersController < ApplicationController
   end
 
   def new
-    # render the signup form
     @user = User.new
   end
 
   def create
-    # post request from signup form
     @user = User.create(params[:user])
     redirect_to @user
   end

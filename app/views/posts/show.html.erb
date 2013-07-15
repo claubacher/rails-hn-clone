@@ -2,3 +2,11 @@
 <p><%= @post.user.username %></p>
 
 <p><%= @post.article %></p>
+
+<h2>Comments</h2>
+
+<ul>
+<% @post.comments.each do |comment| %>
+  <li><%= render comment %></li>
+<% end %>
+</ul>

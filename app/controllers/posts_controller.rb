@@ -9,12 +9,10 @@ class PostsController < ApplicationController
   end
 
   def new
-    # render the new post form
     @post = Post.new
   end
 
   def create
-    # post request from new post form
     @post = Post.create(params[:post])
     redirect_to @post
   end
