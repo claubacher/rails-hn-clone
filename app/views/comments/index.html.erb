@@ -1,0 +1,12 @@
+<ul>
+<% @comments.each do |comment| %>
+  <li>
+    <%= comment.opinion %>
+    <%= comment.user.username %>
+    <%= link_to 'Show', comment_path(comment) %>
+    <%= link_to 'Edit', edit_comment_path(comment) %>
+    <%= link_to 'Destroy', comment_path(comment),
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+  </li>
+<% end %>
+</ul>
